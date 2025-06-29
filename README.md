@@ -2,7 +2,13 @@
 
 * Establish the Search Tree
 * Neural Net to ***prune*** the Search Tree
-##
+## Definition: Value Network
+V = f(State)
+
+**What is V?**
+* V = -1 Black wins board state
+* V = 0 draw board state
+* V = 1 White wins board state
 ## Converting Board State to Vector
 
 **State(Board):**
