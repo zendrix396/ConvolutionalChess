@@ -1,18 +1,14 @@
-import os
-import chess.pgn
-from state import State
-for fn in os.listdir('data'):
-    pgn = open(os.path.join('data', fn))
-    while 1:
-        try: 
-            game = chess.pgn.read_game(pgn)
-        except:
-            break
-        value = {"1-0":1, "0-1":-1, "1/2-1/2":0}[game.headers['Result']]
-        board = game.board()
-        for i, move in enumerate(game.mainline_moves()):
-            board.push(move)
-            # extract the boards
-            print(State(board).serialize())
-            exit()
-    break
+from torch.utils.data import Dataset
+import numpy as np
+class ChessValDataset(Dataset):
+    def __init__(self):
+        data= np.load('processed/dataset_1M.npz')
+        self.X = data['arr_0']
+        self.Y = data['arr_1']
+        print('loaded: ', self.X.shape, self.Y.shape)
+    def __len__(self):
+        return self.X.shape[0]
+    def __getitem__(self, idx):
+        return {'X':self.X[idx], 'Y':self.Y[idx]}
+
+chess_dataset = ChessValDataset()

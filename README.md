@@ -36,3 +36,9 @@ Extra State:
 >Value(Current State) = Immediate_Reward + Value(Next_state)
 ### MiniMax
 >Calculating the next best possible move considering the opponent has also selected the it's best possible move
+##
+### Basic concept of Deep Learning
+3 Main Components
+* Activation functions (Relu, tanh)
+* Layers 
+* Optimizers (Adam)
