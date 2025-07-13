@@ -1,6 +1,7 @@
-<h2 style="text-align:center"> 
-Incomplete Right now
+   <h2 align='center'> 
+Work in Progress
 </h2>
+
 
 # Chess Engine
 
