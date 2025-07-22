@@ -1,7 +1,7 @@
    <h2 align='center'> 
-Work in Progress
+Work in Progress 
 </h2>
-
+This is a backend for [klonos](https://github.com/zendrix396/klonos)
 
 # Chess Engine
 
